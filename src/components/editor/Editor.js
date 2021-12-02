@@ -11,6 +11,9 @@ export default function Editor({
   setPhrase,
   setHeadCount,
   setMiddleCount,
+  setBottomCount,
+  setPhraseCount,
+  setPhraseList,
 }) {
   const handleHeadCount = (e) => {
     setHead(e.target.value);
@@ -20,6 +23,19 @@ export default function Editor({
     setMiddle(e.target.value);
     setMiddleCount((prevState) => prevState + 1);
   };
+  const handleBottomCount = (e) => {
+    setBottom(e.target.value);
+    setBottomCount((prevState) => prevState + 1);
+  };
+  const handlePhrase = (e) => {
+    setPhrase(e.target.value);
+  };
+  const handleClick = () => {
+    setPhraseList((prevState) => [...prevState, phrase]);
+    setPhraseCount((prevState) => prevState + 1);
+    setPhrase('');
+  };
+
   return (
     <div className="editor">
       <div className="form-control">
@@ -35,28 +51,23 @@ export default function Editor({
         <label htmlFor="middle">Middle</label>
         <select value={middle} onChange={handleMiddleCount}>
           <option value="blue">Blue</option>
-          <option value="fancy">Fancy</option>
           <option value="pink">Pink</option>
           <option value="red">Red</option>
         </select>
       </div>
       <div className="form-control">
         <label htmlFor="bottom">Bottom</label>
-        <select value={bottom} onChange={(e) => setBottom(e.target.value)}>
-          <option value="single">Single Leg</option>
+        <select value={bottom} onChange={handleBottomCount}>
+          <option value="leg-pants">Single Leg</option>
           <option value="white-pants">White Pants</option>
-          <option value="blue-jeans">Blue Jeans</option>
+          <option value="darkblue-pants">Blue Jeans</option>
+          <option value="dog-pants">Dog Pants</option>
         </select>
       </div>
       <div className="form-control">
         <label htmlFor="phrase">Add A Catch Phrase</label>
-        <input
-          name="phrase"
-          type="text"
-          value={phrase}
-          onChange={(e) => setPhrase(e.target.value)}
-        />
-        <button>Add!</button>
+        <input name="phrase" type="text" value={phrase} onChange={handlePhrase} />
+        <button onClick={handleClick}>Add!</button>
       </div>
     </div>
   );

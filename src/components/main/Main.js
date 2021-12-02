@@ -14,6 +14,8 @@ export default function Main() {
   const [middleCount, setMiddleCount] = useState(0);
   const [bottomCount, setBottomCount] = useState(0);
   const [phraseCount, setPhraseCount] = useState(0);
+  const [phraseList, setPhraseList] = useState([]);
+
   return (
     <main>
       <Preview
@@ -37,6 +39,8 @@ export default function Main() {
           setBottomCount,
           phraseCount,
           setPhraseCount,
+          setPhraseList,
+          phraseList,
         }}
       />
     </main>
