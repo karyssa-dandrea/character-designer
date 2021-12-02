@@ -8,7 +8,7 @@ main {
   gap: 20px;
   justify-content: center;
   height: 850px;
-  background-color: #6b705c;
+  background-color: #283618;
   color: white;
   font-family: 'Quicksand', sans-serif;
 }
@@ -36,4 +36,10 @@ p {
 button {
   margin: 10%;
   font-family: 'Quicksand', sans-serif;
+}
+
+#phrase-2 {
+  border: solid 5px #cb997e;
+  border-radius: 15px;
+  margin: 10%;
 }
