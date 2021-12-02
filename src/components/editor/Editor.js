@@ -9,12 +9,17 @@ export default function Editor({
   setBottom,
   phrase,
   setPhrase,
+  setHeadCount,
 }) {
+  const handleHeadCount = (e) => {
+    setHead(e.target.value);
+    setHeadCount((prevState) => prevState + 1);
+  };
   return (
     <div className="editor">
       <div className="form-control">
         <label htmlFor="head">Head</label>
-        <select value={head} onChange={(e) => setHead(e.target.value)}>
+        <select value={head} onChange={handleHeadCount}>
           <option value="bird-head">Bird Head</option>
           <option value="dog-head">Dog Head</option>
           <option value="duck-head">Duck Head</option>
@@ -46,6 +51,7 @@ export default function Editor({
           value={phrase}
           onChange={(e) => setPhrase(e.target.value)}
         />
+        <button>Add!</button>
       </div>
     </div>
   );

@@ -10,10 +10,35 @@ export default function Main() {
   const [middle, setMiddle] = useState('');
   const [bottom, setBottom] = useState('');
   const [phrase, setPhrase] = useState('');
+  const [headCount, setHeadCount] = useState(0);
+  const [middleCount, setMiddleCount] = useState(0);
+  const [bottomCount, setBottomCount] = useState(0);
+  const [phraseCount, setPhraseCount] = useState(0);
   return (
     <main>
-      <Preview {...{ head, middle, bottom, phrase }} />
-      <Editor {...{ head, setHead, middle, setMiddle, bottom, setBottom, phrase, setPhrase }} />
+      <Preview
+        {...{ head, middle, bottom, phrase, headCount, middleCount, bottomCount, phraseCount }}
+      />
+      <Editor
+        {...{
+          head,
+          setHead,
+          middle,
+          setMiddle,
+          bottom,
+          setBottom,
+          phrase,
+          setPhrase,
+          headCount,
+          setHeadCount,
+          middleCount,
+          setMiddleCount,
+          bottomCount,
+          setBottomCount,
+          phraseCount,
+          setPhraseCount,
+        }}
+      />
     </main>
   );
 }
