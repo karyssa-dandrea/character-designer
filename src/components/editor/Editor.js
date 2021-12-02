@@ -22,21 +22,30 @@ export default function Editor({
         </select>
       </div>
       <div className="form-control">
-        <select value={middle} onChange={(e) => setMiddle(e.target.value)} />
         <label htmlFor="middle">Middle</label>
+        <select value={middle} onChange={(e) => setMiddle(e.target.value)}>
+          <option value="blue">Blue</option>
+          <option value="fancy">Fancy</option>
+          <option value="pink">Pink</option>
+          <option value="red">Red</option>
+        </select>
       </div>
       <div className="form-control">
-        <select value={bottom} onChange={(e) => setBottom(e.target.value)} />
         <label htmlFor="bottom">Bottom</label>
+        <select value={bottom} onChange={(e) => setBottom(e.target.value)}>
+          <option value="single">Single Leg</option>
+          <option value="white-pants">White Pants</option>
+          <option value="blue-jeans">Blue Jeans</option>
+        </select>
       </div>
       <div className="form-control">
+        <label htmlFor="phrase">Add A Catch Phrase</label>
         <input
           name="phrase"
           type="text"
           value={phrase}
           onChange={(e) => setPhrase(e.target.value)}
         />
-        <label htmlFor="phrase">Add A Catch Phrase</label>
       </div>
     </div>
   );
