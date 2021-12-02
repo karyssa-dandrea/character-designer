@@ -10,10 +10,15 @@ export default function Editor({
   phrase,
   setPhrase,
   setHeadCount,
+  setMiddleCount,
 }) {
   const handleHeadCount = (e) => {
     setHead(e.target.value);
     setHeadCount((prevState) => prevState + 1);
+  };
+  const handleMiddleCount = (e) => {
+    setMiddle(e.target.value);
+    setMiddleCount((prevState) => prevState + 1);
   };
   return (
     <div className="editor">
@@ -28,7 +33,7 @@ export default function Editor({
       </div>
       <div className="form-control">
         <label htmlFor="middle">Middle</label>
-        <select value={middle} onChange={(e) => setMiddle(e.target.value)}>
+        <select value={middle} onChange={handleMiddleCount}>
           <option value="blue">Blue</option>
           <option value="fancy">Fancy</option>
           <option value="pink">Pink</option>
