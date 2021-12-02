@@ -1,0 +1,31 @@
+main {
+  display: flex;
+  flex-wrap: wrap;
+  margin-bottom: 80px;
+  background-size: cover;
+  align-content: center;
+  position: relative;
+  gap: 20px;
+  justify-content: center;
+  height: 850px;
+  background-color: darkslategray;
+  color: white;
+  font-family: 'Quicksand', sans-serif;
+}
+
+img {
+  display: flex;
+  flex-direction: column;
+}
+
+p {
+  display: flex;
+  padding: 0.5px;
+}
+
+.form-control {
+  display: flex;
+  flex-direction: column;
+  padding: 5px;
+  font-family: 'Quicksand', sans-serif;
+}

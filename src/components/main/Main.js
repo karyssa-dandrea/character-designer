@@ -19,7 +19,17 @@ export default function Main() {
   return (
     <main>
       <Preview
-        {...{ head, middle, bottom, phrase, headCount, middleCount, bottomCount, phraseCount }}
+        {...{
+          head,
+          middle,
+          bottom,
+          phrase,
+          headCount,
+          middleCount,
+          bottomCount,
+          phraseCount,
+          phraseList,
+        }}
       />
       <Editor
         {...{
