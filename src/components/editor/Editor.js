@@ -13,8 +13,13 @@ export default function Editor({
   return (
     <div className="editor">
       <div className="form-control">
-        <select value={head} onChange={(e) => setHead(e.target.value)} />
         <label htmlFor="head">Head</label>
+        <select value={head} onChange={(e) => setHead(e.target.value)}>
+          <option value="bird-head">Bird Head</option>
+          <option value="dog-head">Dog Head</option>
+          <option value="duck-head">Duck Head</option>
+          <option value="horse-head">Horse Head</option>
+        </select>
       </div>
       <div className="form-control">
         <select value={middle} onChange={(e) => setMiddle(e.target.value)} />
