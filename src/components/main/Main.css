@@ -8,7 +8,7 @@ main {
   gap: 20px;
   justify-content: center;
   height: 850px;
-  background-color: darkslategray;
+  background-color: #6b705c;
   color: white;
   font-family: 'Quicksand', sans-serif;
 }
@@ -20,12 +20,20 @@ img {
 
 p {
   display: flex;
-  padding: 0.5px;
+  padding: 0.3px;
 }
 
 .form-control {
   display: flex;
   flex-direction: column;
-  padding: 5px;
+  padding: 10px;
+  font-family: 'Quicksand', sans-serif;
+  border: solid 5px #cb997e;
+  border-radius: 15px;
+  margin: 10%;
+}
+
+button {
+  margin: 10%;
   font-family: 'Quicksand', sans-serif;
 }
